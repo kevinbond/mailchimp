@@ -5,7 +5,7 @@ require 'json'
 message = $currentCall.initialText
 callerID = $currentCall.callerID
 
-apiKey = '1a4d654d423a919183d00f8afdb8a558-us2'
+apiKey = 'mailchimp's API_KEY'
 
 id =Net::HTTP.get_response(URI.parse("http://us2.api.mailchimp.com/1.3/?method=listsForEmail&apikey=1a4d654d423a919183d00f8afdb8a558-us2&email_address=kbond@voxeo.com"))
 listID = JSON.parse(id.body)
