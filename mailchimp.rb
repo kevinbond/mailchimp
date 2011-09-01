@@ -24,7 +24,7 @@ options = "
         &options[subject]=#{subject}
         &options[from_email]=#{FROM_ADDRESS}
         &options[from_name]=#{URI.encode(caller_id)}
-        &options[to_name]=#{to}"
+        &options[to_name]=#{to}".gsub("\n","")
         
         
 parameters = "apikey=#{API_KEY}&type=plaintext&options=#{options}&content#{content}"
