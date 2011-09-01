@@ -20,11 +20,11 @@ subject = URI.encode "You just recieved a text message!"
 
 content = "[text]=#{URI.encode(initial_text)}"
 options = "&
-options[list_id]=#{listID[0]}&
-options[subject]=#{subject}&
-options[from_email]=#{FROM_ADDRESS}&
-options[from_name]=#{URI.encode(caller_id)}&
-options[to_name]=#{to}".gsub("\n","")
+           options[list_id]=#{listID[0]}&
+           options[subject]=#{subject}&
+           options[from_email]=#{FROM_ADDRESS}&
+           options[from_name]=#{URI.encode(caller_id)}&
+           options[to_name]=#{to}".gsub("\n","").gsub(" ","")
         
         
 parameters = "apikey=#{API_KEY}&type=plaintext&options=#{options}&content#{content}"
