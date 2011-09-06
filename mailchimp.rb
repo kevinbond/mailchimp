@@ -1,10 +1,10 @@
 %w(uri net/http json).each{|lib| require lib}
 
 #CONFIG
-YOUR_NAME = URI.encode("Kevin Bond")
+YOUR_NAME = URI.encode("your_name")
 API_URL = "http://us2.api.mailchimp.com/1.3"
 API_KEY = 'mailchimp_api_key'
-FROM_ADDRESS = "kbond@voxeo.com"
+FROM_ADDRESS = "primary_email"
 SUBJECT = URI.encode("You just recieved a text message!")
 
 # Get the initial Text, and callerId
